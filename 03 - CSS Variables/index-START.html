@@ -18,7 +18,11 @@
     <input id="base" type="color" name="base" value="#ffc600">
   </div>
 
-  <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
+  <div class="container">
+    <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
+    <div class="centered">Boo!</div>
+  </div>
+
 
   <style>
 
@@ -31,6 +35,10 @@
     img{
       padding: var(--spacing);
       background: var(--base);
+      filter: blur(var(--blur));
+    }
+
+    centered{
       filter: blur(var(--blur));
     }
 
@@ -57,6 +65,20 @@
     input {
       width: 100px;
     }
+
+    .container {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
   </style>
 
   <script>
