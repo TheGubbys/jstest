@@ -82,12 +82,31 @@
     console.log(car.getPriceInDKK());
     */
 
-    const arr = ['Audi', "BMW", "VW"];
-    const car = {brand:"VW", price: 5, currency:"BTC", rate: 3000843.98,}
+    //const arr = ['Audi', "BMW", "VW"];
+    //const car = {brand:"VW", price: 5, currency:"BTC", rate: 3000843.98,}
+    //  for(let i=0; i<arr.length; i++){
+    //    console.log(arr[i]);
+    //}
 
-    for(let i=0; i<arr.length; i++){
-        console.log(arr[i]);
+    class Car {
+        constructor(brand, price){
+            this.brand = brand;
+            this.price = price;
+            this.currenct = "BTC";
+            this.rate =  3000843.98;
+        }
+
+        getPriceInDKK(){
+            return this.price + this.rate + ' DKK';
+        }
     }
+
+    const carOne = new Car('VW', 5);
+    const carTwo = new Car('BMW', 7);
+    const carThree = new Car('Audi', 9);
+    console.log(carOne);
+    console.log(carTwo);
+    console.log(carThree);
 
 </script>
 </body>
